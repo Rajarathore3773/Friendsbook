@@ -1,16 +1,5 @@
 class CommentsController < ApplicationController
 
-  # def create
-  #   @comment = current_user.comments.build(comment_params)
-  #   if @comment.save
-  #     flash[:success] = 'Comment posted'
-  #     redirect_to Post.find(@comment.post_id)
-  #   else
-  #     flash[:danger] = 'Comment not posted'
-  #     redirect_to root_url
-  #   end
-  # end
-
   def index
     @comments=Comment.all
   end
