@@ -20,8 +20,8 @@ class PostsController < ApplicationController
 
   
    def create
-   #debugger
-  #   # @post = @user.posts.build(post_params)
+  
+    # @post = @user.posts.build(post_params)
      #@post = current_user.posts.build(post_params)
     @post = Post.new(post_params)
     if @post.save
@@ -31,20 +31,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # def create
-  #  # debugger
-  #   @post = current_user.posts.build(post_params)
-  #   if @post.save
-  #     flash[:post_success] = 'Post successful!'
-  #     redirect_to posts_path(@post)
-  #   else
-  #     flash[:post_failure] = 'Post did not save - text content required.'
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
-
- 
-
+  
   def edit
   end
 
