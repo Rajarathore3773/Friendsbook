@@ -1,0 +1,24 @@
+<h1>Show post</h1>
+
+<div class="col-lg-12">
+<div class="card rounded-0 mt-4 mb-5">
+    <div class="card-body">
+        <h2 class="text-center">  Post  Details  </h2>
+            <div class ="row mt-5">
+                <div class="col-lg-6">
+                <% if @post.image.attached?%>
+                  <%= image_tag @post.image%>
+                  <%end%>
+                    <p class="lead"><strong>Content: </strong><%=@post.content%></p>
+                 </div>
+
+                
+            </div>
+    <li><%= link_to "Edit post", edit_post_path(@post), class:"btn btn-primary btn-lg"%></li>  
+    <li><%= link_to "Destroy", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+    <li> <%= link_to "Back to posts", posts_path, class:"btn btn-outline-primary btn-lg "%> </li>
+
+    </div>
+</div>
+
+</div>

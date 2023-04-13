@@ -1,0 +1,23 @@
+<%= form_with model: @post  do |form| %>
+  <div>
+    <%= form.label :content %><br>
+    <%= form.text_field :content %>
+    <% post.errors.full_messages_for(:content).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+    <div>
+      <%= form.label :image %><br>
+      <%= form.file_field :image %>
+    </div>
+ <br>
+ <div class="row">
+   <div class= "col-lg-4 mt-3">
+     <%= form.submit class: "btn btn-primary btn-lg mb-4 rounded-0"%>
+     <%= link_to "Back To Posts" , posts_path,class: "btn btn-outline-primary btn-lg mb-4 rounded-0" %>
+   </div>
+</div>
+<% end %>
+
+
